@@ -1,0 +1,71 @@
+
+[:python_version < "3.10"]
+typing_extensions<5.0.0,>=4.0.0
+
+[:python_version < "3.8"]
+numpy==1.21.5
+
+[:python_version >= "3.8"]
+numpy<2.0.0,>=1.20.0
+
+[build]
+invoke>=1.6.0
+pip-tools>=6.5.0
+
+[complete]
+pandas
+
+[complete:python_version >= "3.8"]
+pandas-stubs-fork
+
+[dev]
+invoke>=1.6.0
+pip-tools>=6.5.0
+autoflake
+black
+coverage
+codecov>=2.1.0
+feedparser
+isort
+mypy
+pylint
+pyright
+setuptools
+typeguard
+wheel
+pandas
+
+[dev:python_version < "3.10"]
+beartype<0.10.0
+
+[dev:python_version >= "3.10"]
+beartype>=0.10.0
+
+[dev:python_version >= "3.8"]
+pandas-stubs-fork
+
+[pandas]
+pandas
+
+[pandas:python_version >= "3.8"]
+pandas-stubs-fork
+
+[qa]
+autoflake
+black
+coverage
+codecov>=2.1.0
+feedparser
+isort
+mypy
+pylint
+pyright
+setuptools
+typeguard
+wheel
+
+[qa:python_version < "3.10"]
+beartype<0.10.0
+
+[qa:python_version >= "3.10"]
+beartype>=0.10.0
